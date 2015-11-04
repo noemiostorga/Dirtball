@@ -1,0 +1,22 @@
+.container{
+	height: 550px;
+	width: 90%;
+	margin: 70px auto;
+	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') no-repeat;
+	background-position: center center;
+}
+
+
+.deathcontain {
+	height: 300px;
+	width: 300px;
+}
+
+.deathStar{
+	background: url('http://img2.wikia.nocookie.net/__cb20130901195227/epicrapbattlesofhistory/images/9/9f/Death_Star_-_1st.png') no-repeat;
+    background-size: 200px;
+    height: 200px;
+    width: 250px;
+
+}
+
