@@ -1,3 +1,8 @@
+/***********************
+GAME SCREEN
+**************************/
+
+/*container*/
 .container{
 	height: 600px;
 	width: 90%;
@@ -8,10 +13,10 @@
 }
 
 .deathContainer {
-
 	height: 250px;
 	width: 250px;
 	position: relative;
+	top:10em;
 
 }
 
@@ -27,15 +32,46 @@
 
 .userContainer {
 
-	height: 5em;
+	height: 2.5em;
 	width: 100%;
 	position: relative;
-	top:16.875em;
+	top:19.375em;
 	background: rgba(80, 74, 75, .4);
+
 
 }
 
 .health{
-	widthL 
+	width:40%;
+	height: 100%;
+	background: red;
+	float: left;
+
+}
+
+
+
+.scoreboard{
+
+	float: right;
+	text-align: center;
+	position: relative;
+	background: rgba(0,0,0, .4);
+	color:#FFF8E7;
+}
+.score{
+	font-size: 2em;
+	padding:1em 1em;
+	font-weight: bold;
+	display: inline;
+
+}
+
+.points {
+	font-size: 2em;
+	text-align: center;
+	position: relative;
+	display: inline;
+	padding:1em 1em;
 
 }
