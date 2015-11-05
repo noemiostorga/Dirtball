@@ -1,4 +1,12 @@
 /***********************
+GENERAL
+**************************/
+
+
+
+
+
+/***********************
 GAME SCREEN
 **************************/
 
@@ -7,9 +15,10 @@ GAME SCREEN
 	height: 600px;
 	width: 90%;
 	margin: 45px auto;
-	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') no-repeat;
+	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg');
 	background-position: center center;
 	background-attachment: fixed;
+	padding: .5em;
 }
 
 .deathContainer {
@@ -30,6 +39,7 @@ GAME SCREEN
     left: 3.25em;
 }
 
+/*healthbar*/
 .userContainer {
 
 	height: 2.5em;
@@ -50,7 +60,7 @@ GAME SCREEN
 }
 
 
-
+/*score*/
 .scoreboard{
 
 	float: right;
