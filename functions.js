@@ -1,35 +1,45 @@
+var deathEstrella = function() {
+	this.punto = points ; //function that'll keep on adding points
+	this.salud = 100;
+	this.planeta = planeta;
+	this.ataque = attack;
+}
 
 
-var contenador = document.getElementById("container");
-var planeta = document.getElementById("planets");
-var deathEstrella = document.getElementById("deathStar");
-var salud = document.getElementById("health");
-var punto = document.getElementById("points");
 
-
-
-$("#container").hide(); 
-$(".overlay").click(function(){
-	$("#container").fadeToggle("slow");
-});
+//1.make an overlay so when clicked 
+	//fades into the game
 
 
 
 
-$("#planets").on("click", function () {
+
+$("#planets").on("click", function attack() {
 	//When clicked on planets 
 	//1. make a click function on planet
+		//1.1 make planet disapear
 	$("#planets").toggleClass("replacePlanets");
 	
-		//1.1 make planet disapear
+		
 	//2.then make 'points ' show up/replace
-
+	 //--replance planets should already have score points
 
 	/*make other planets reapear once this planet disappears
 		//have planet *slide* in once the other planet is gone
  	*/
 	console.log("planets")
 });
+
+var attack = new deathEstrella('shoot');
+deathEstrella.shoot = function (){
+
+}
+
+
+
+planeta.replacePlanets = function (attack) {
+	return console.log("cst");
+}
 
 
 var deathEstrella = function () {
