@@ -20,19 +20,19 @@ animation: backgroundScroll 60s ease infinite;
 	width: 90%;
 	height: 600px;
 	margin: 45px auto;
-	background : red;
+	background: red;
 
 }
 
 	
 
 @-webkit-keyframes backgroundScroll {
-from {background-position: center left;}
+from {background-position: center;}
 to {background-position: center right;}
 }
 
 @keyframes backgroundScroll {
-from {background-position: center left;}
+from {background-position: center;}
 to {background-position: center right;}
 }
 
@@ -67,7 +67,7 @@ to {background-position: center right;}
 
 
 
-#replacePlanets{
+.replacePlanets{
 	display: none;
 }
 
@@ -78,12 +78,11 @@ to {background-position: center right;}
 .userContainer {
 
     height: 2.5em;
-    width: 90%;
+    width: 81%;
     position: absolute;
     top: 37.365em;
     background: rgba(80, 74, 75, .4);
- 
-
+    margin: 0 auto;
 
 }
 
@@ -92,6 +91,7 @@ to {background-position: center right;}
 	height: 100%;
 	background: red;
 	float: left;
+	position: absolute;
 	transition: width ease-out 10s;
 }
 #health:hover{

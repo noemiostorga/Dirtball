@@ -8,14 +8,19 @@ var punto = document.getElementById("points");
 
 
 
-$(".overlay").click (function(){
-	$(".overlay").toggleClass("overlay");
+$("#container").hide(); 
+$(".overlay").click(function(){
+	$("#container").fadeToggle("slow");
 });
 
-var planeta = function () {
 
+
+
+$("#planets").on("click", function () {
 	//When clicked on planets 
 	//1. make a click function on planet
+	$("#planets").toggleClass("replacePlanets");
+	
 		//1.1 make planet disapear
 	//2.then make 'points ' show up/replace
 
@@ -24,7 +29,7 @@ var planeta = function () {
 		//have planet *slide* in once the other planet is gone
  	*/
 	console.log("planets")
-}
+});
 
 
 var deathEstrella = function () {
