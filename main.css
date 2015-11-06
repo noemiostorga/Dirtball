@@ -10,21 +10,41 @@ GAME SCREEN
 	height: 600px;
 	width: 90%;
 	margin: 45px auto;
-	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg');
-	background-position: center center;
-	background-attachment: fixed;
-	padding: .5em;
+	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') repeat-y;
+-webkit-animation: backgroundScroll 60s ease infinite;
+animation: backgroundScroll 60s ease infinite;
+	padding: 1% ;
+}
+
+.overlay{
+	width: 90%;
+	height: 600px;
+	margin: 45px auto;
+	background : red;
+
+}
+
+	
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: center left;}
+to {background-position: center right;}
+}
+
+@keyframes backgroundScroll {
+from {background-position: center left;}
+to {background-position: center right;}
 }
 
 .deathContainer {
     height: 6.25em;
     width: 6.625em;
-	position: relative;
+	position: absolute;
 
 
 }
 
-.deathStar {
+#deathStar {
     background: url('http://img2.wikia.nocookie.net/__cb20130901195227/epicrapbattlesofhistory/images/9/9f/Death_Star_-_1st.png') no-repeat;
     background-size: 6.375em;
     height: 6.5em;
@@ -32,6 +52,7 @@ GAME SCREEN
     position: relative;
     /* top: 4.375em; */
     left: 3.25em;
+   
 }
 
 /*planets*/
@@ -56,11 +77,12 @@ GAME SCREEN
 /*healthbar*/
 .userContainer {
 
-	height: 2.5em;
-	width: 100%;
-	position: relative;
-	top:19.375em;
-	background: rgba(80, 74, 75, .4);
+    height: 2.5em;
+    width: 90%;
+    position: absolute;
+    top: 37.365em;
+    background: rgba(80, 74, 75, .4);
+ 
 
 
 }
@@ -71,6 +93,10 @@ GAME SCREEN
 	background: red;
 	float: left;
 	transition: width ease-out 10s;
+}
+#health:hover{
+	width:0%;
+	
 }
 
 /*.health:hover{
