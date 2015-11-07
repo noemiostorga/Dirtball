@@ -2,6 +2,40 @@
 
 
 /***********************
+OVERLAY
+**************************/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,248,231, .7);
+    z-index: 10000;
+
+}
+
+
+.overlay button {
+
+    background: transparent;
+    color: white;
+	border: none;
+	position: relative;
+	top: 40%;
+	left: 35%;
+	font-family: 'Abel', sans-serif;
+	font-size: 2em;
+	font-weight: bold; 
+	min-height: 10%;
+	min-width: 15%;
+	padding:4%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+}
+
+/***********************
 GAME SCREEN
 **************************/
 
@@ -11,8 +45,8 @@ GAME SCREEN
 	width: 90%;
 	margin: 45px auto;
 	background: url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') repeat-y;
--webkit-animation: backgroundScroll 60s ease infinite;
-animation: backgroundScroll 60s ease infinite;
+-webkit-animation: backgroundScroll 60s ease-in-out infinite;
+animation: backgroundScroll 60s ease-in-out infinite;
 	padding: 1% ;
 }
 	
@@ -25,6 +59,8 @@ to {background-position: center right;}
 from {background-position: center;}
 to {background-position: center right;}
 }
+
+
 
 .deathContainer {
     height: 6.25em;
@@ -53,6 +89,7 @@ to {background-position: center right;}
     width: 150px;
     position: relative;
     cursor: pointer;
+
 }
 
 
@@ -129,12 +166,7 @@ to {background-position: center right;}
 DESCRIPTION
 **************************/
 
-.description{
-	width: 100%;
-	height: 200px;
-	background: #000;
 
-}
 
 
 
