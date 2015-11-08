@@ -2,11 +2,11 @@ $(document).ready(function (){
 
 
 $("#Btn").on("click", function(){;
-	$(".overlay").fadeOut();
+	$(".overlay").fadeOut(); //maybe apend auido?
 })
 
 
-var deathEstrella = function() {
+var deathStar = function() {
 	this.punto = points; //function that'll keep on adding points
 	this.salud = 100;
 	this.planet = planet;
@@ -42,8 +42,8 @@ var deathEstrella = function() {
 		//When clicked on planets 
 		//1. make a click function on planet
 			//1.1 make planet disapear
-		$("#planets").toggleClass("replacePlanets");
-		$("#points").text(punto());
+		$("#planets").remove();
+		$("#points").text(punto);
 	
 			
 		//2.then make 'points ' show up/replace
@@ -60,7 +60,7 @@ var deathEstrella = function() {
 
 
 
-	var deathEstrella = function () {
+	var deathStar = function () {
 		//have image fade little by three phases
 		//1.make image fade 2/3 health
 		//2.make image opacity fade more at amost 1/3 health

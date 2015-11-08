@@ -31,13 +31,13 @@ OVERLAY
 	min-height: 10%;
 	min-width: 15%;
 	padding:1%;
+	transition: color ease 1s;
 
 
 }
 
 #Btn:hover {
- 	color: #000;
- 		font-weight: bold; 
+ 	color: #000; 
 }
 
 .space{
@@ -45,8 +45,8 @@ OVERLAY
 	width: 100%;
 	position: relative;
 	background: linear-gradient(rgba(255,248,231, .6), rgba(255,248,231, .6)), url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') repeat-y;
-	-webkit-animation: backgroundScroll 60s ease-in-out infinite;
-	animation: backgroundScroll 60s ease-in-out infinite;
+	-webkit-animation: backgroundScroll 60s ease infinite;
+	animation: backgroundScroll 60s ease infinite;
 
 }
 
