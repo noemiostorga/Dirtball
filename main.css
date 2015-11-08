@@ -4,36 +4,63 @@
 /***********************
 OVERLAY
 **************************/
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,248,231, .7);
+;
     z-index: 10000;
+
 
 }
 
 
-.overlay button {
+#Btn {
 
     background: transparent;
-    color: white;
+    color: transparent;
 	border: none;
 	position: relative;
 	top: 40%;
-	left: 35%;
+	left: 40%;
 	font-family: 'Abel', sans-serif;
-	font-size: 2em;
-	font-weight: bold; 
+	font-size: 3em;
 	min-height: 10%;
 	min-width: 15%;
-	padding:4%;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	padding:1%;
+
 
 }
+
+#Btn:hover {
+ 	color: #000;
+ 		font-weight: bold; 
+}
+
+.space{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: linear-gradient(rgba(255,248,231, .6), rgba(255,248,231, .6)), url('https://fathomazure.files.wordpress.com/2013/11/image-fascinating-images-from-outer-space-update-dec_4958696.jpg') repeat-y;
+	-webkit-animation: backgroundScroll 60s ease-in-out infinite;
+	animation: backgroundScroll 60s ease-in-out infinite;
+
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: center;}
+to {background-position: center right;}
+}
+
+@keyframes backgroundScroll {
+from {background-position: center;}
+to {background-position: center right;}
+}
+
+
 
 /***********************
 GAME SCREEN
