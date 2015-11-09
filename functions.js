@@ -1,8 +1,9 @@
 $(document).ready(function (){
 
 
+
 $("#Btn").on("click", function(){;
-	$(".overlay").fadeOut(); //maybe apend auido?
+	$(".overlay").fadeOut(1300, "linear"); //maybe append spaceauido?
 })
 
 
@@ -27,13 +28,11 @@ var deathStar = function() {
 
 	    return Math.floor(Math.random() * (max - min) + min);
 	  }; //function that'll attack and affect health
+
 }
 
 
 
-//1.make overlay so when clicked 
-	//fades into the game
-//2. make other stuff hide
 
 
 
