@@ -1,38 +1,22 @@
 $(document).ready(function (){
 
+	
 
-
-$("#Btn").on("click", function(){;
-	$(".overlay").fadeOut(1300, "linear"); //maybe append spaceauido?
-})
-
-
-var deathStar = function() {
+var game = function() {
 	this.punto = points; //function that'll keep on adding points
+	
 	this.salud = 100;
 	this.planet = planet;
-	this.attack = function (opponent) {
-	    var hitChance = Math.random();
-	    if (hitChance > .6) {
-	      planet.health -= 10;
-	    } else {
-	      console.log(" missed!!!!");
-	    }
-	  };
-	  this.criticalHit = function (opponent) {
-	    opponent.health -= this.randomCrit();
-	  };
-	  this.randomCrit = function () {
-	    var max = 20;
-	    var min = 11;
-
-	    return Math.floor(Math.random() * (max - min) + min);
-	  }; //function that'll attack and affect health
+	this.attack = attack; //function that'll attack and affect health
 
 }
 
 
 
+$("#Btn").on("click", function(){;
+	$(".overlay").fadeOut(1300, "linear"); //maybe append spaceauido?
+
+})
 
 
 
