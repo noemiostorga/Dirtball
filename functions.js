@@ -7,7 +7,7 @@ var deathStar = function() {
 		 if (shoot > 3) {
       deathStar.health -= 10;
     } else {
-      $("#health:hover").css("width", '-10%');
+      $("#health:hover").css("width", '10%');
     }
 	};
 
@@ -77,30 +77,30 @@ var total_points = 0;
 
 deathStar.shoot(planet);
 
-	var left = 2;
-	var right = 2;
-	var up = 2;
-	var down = 2;
-	var move = 2;
+	var left = 200;
+	var right = 200;
+	var up = 200;
+	var down = 200;
+	var move = 200;
 
 	$(document).keydown(function(e) {
 	    switch(e.which) {
 	        case 37: // left
-	        $("#deathStar").animate({left: move +'2px'});
+	        $("#deathStar").animate({left: move +'20px'});
 	        move -= move;
 	        break;
 
 	        case 38: // up
 	      
 	        lert("right!");
-	        $("#deathStar").animate({left: right +'2px'});
+	        $("#deathStar").animate({left: right +'20px'});
 	        right += right;
 
 	        break;
 
 	        case 39: // right
 	        
-	        $("#deathStar").animate({left: move +'2px'});
+	        $("#deathStar").animate({left: move +'20px'});
 	        move += move;
 	        break;
 
