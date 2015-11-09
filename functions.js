@@ -2,15 +2,19 @@ $(document).ready(function (){
 
 	
 
-var game = function() {
-	this.punto = points; //function that'll keep on adding points
+var deathStar = function() {
+
 	
-	this.salud = 100;
+	this.health = 100;
 	this.planet = planet;
-	this.attack = attack; //function that'll attack and affect health
+	 //function that'll attack and affect health
 
 }
 
+
+var planets = function() {
+	this.points = points; //function that'll keep on adding points
+}
 
 
 $("#Btn").on("click", function(){;
@@ -19,14 +23,25 @@ $("#Btn").on("click", function(){;
 })
 
 
+var total_points = 0;
 
-
-	$("#planets").on("click", function attack() {
+	$("#planets").on("click", function() {
 		//When clicked on planets 
 		//1. make a click function on planet
 			//1.1 make planet disapear
-		$("#planets").remove();
-		$("#points").text(punto);
+		//$("#planets").remove();
+		//$("#planets").css("visibility", "hidden");
+		$("#planets").animate({left: '250px', top: '250px'});
+		setTimeout(function(){
+  		$("#planets").css("visibility", "visible");
+		}, 500);
+
+
+		total_points += punto();
+		
+		//$("#planets").show();
+		$("#points").text(total_points);
+		
 	
 			
 		//2.then make 'points ' show up/replace
@@ -36,7 +51,7 @@ $("#Btn").on("click", function(){;
 		/*make other planets reapear once this planet disappears
 			//have planet *slide* in once the other planet is gone
 	 	*/
-		console.log("You've attack!");
+		$("#status").text("attacked!");
 	});
 
 
@@ -77,10 +92,41 @@ $("#Btn").on("click", function(){;
 
 	}
 
+	var left = 250;
+	var right = 250;
+	var up = 250;
+	var down = 250;
+	var move = 250;
 
+	$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+        $("#deathStar").animate({left: move +'px'});
+        move -= move;
+        break;
 
+        case 38: // up
+      
+        lert("right!");
+        $("#deathStar").animate({left: right +'px'});
+        right += right;
 
+        break;
 
+        case 39: // right
+        
+        $("#deathStar").animate({left: move +'px'});
+        move += move;
+        break;
+
+        case 40: // down
+        
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
 
 }); //closed doc.ready 
 

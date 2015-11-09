@@ -131,6 +131,17 @@ to {background-position: center right;}
 
 
 /*healthbar*/
+#status{
+	position: relative;
+   	color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+
+
 .userContainer {
 
     height: 2.5em;
