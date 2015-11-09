@@ -24,50 +24,35 @@ $("#Btn").on("click", function(){;
 
 
 var total_points = 0;
-
-	$("#planets").on("click", function() {
+var planet = $("#planets").on("click", function() {
 		//When clicked on planets 
 		//1. make a click function on planet
 			//1.1 make planet disapear
-		//$("#planets").remove();
-		//$("#planets").css("visibility", "hidden");
-		$("#planets").animate({left: '250px', top: '250px'});
+	
+		$("#planets").css("visibility", "hidden");
+		/*make other planets reapear once this planet disappears
+			//have planet *pop* in once the other planet is gone
+	 	*/
+		$("#planets").animate({left: Math.ceil(Math.random()+'10px'), top: Math.ceil(Math.random()+'10px') });
 		setTimeout(function(){
   		$("#planets").css("visibility", "visible");
 		}, 500);
 
-
+			
+		//2.then make 'points ' show up
+		 //--replance planets should already have score points
 		total_points += punto();
-		
-		//$("#planets").show();
 		$("#points").text(total_points);
 		
 	
-			
-		//2.then make 'points ' show up/replace
-		 //--replance planets should already have score points
 
 
-		/*make other planets reapear once this planet disappears
-			//have planet *slide* in once the other planet is gone
-	 	*/
+
+		
 		$("#status").text("attacked!");
 	});
 
 
-
-
-
-	var deathStar = function () {
-		//have image fade little by three phases
-		//1.make image fade 2/3 health
-		//2.make image opacity fade more at amost 1/3 health
-
-			/*shot green array on planet when click on planet 
-				//add sounds when button is click 
-			*/
-		
-	}
 
 	var punto = function() {
 		//math.random will be points on planets range from 0 - 100
@@ -83,20 +68,19 @@ var total_points = 0;
 	var salud = function () {
 		//1.if '0' 
 			//health will go down by 10%
-
+			$("#health").css("width", "10%");
 			/*if number from the movies make *critical hit* 
 			 which brings health down to 30% */
 
-		//2. change color of bar 2/3
-		//3.change color in 1/3
+
 
 	}
 
-	var left = 250;
-	var right = 250;
-	var up = 250;
-	var down = 250;
-	var move = 250;
+	var left = 2;
+	var right = 2;
+	var up = 2;
+	var down = 2;
+	var move = 2;
 
 	$(document).keydown(function(e) {
     switch(e.which) {
