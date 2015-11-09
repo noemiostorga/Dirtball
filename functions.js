@@ -3,14 +3,17 @@ $(document).ready(function (){
 	
 
 var deathStar = function() {	
-	this.health = 100;
-	this.shoot =  function (planet) {
-    var shoot = Math.random();
-    if (shoot > 3) {
+	this.health = function () {
+		 if (shoot > 3) {
       deathStar.health -= 10;
     } else {
-      $("#health:hover").css("width", '10px');
+      $("#health:hover").css("width", '-10%');
     }
+	};
+
+	this.shoot =  function (planet) {
+     return Math.floor(Math.random() * (10 - 1) + 1);
+   
   };
 	 //function that'll attack and affect health
 
@@ -35,7 +38,7 @@ var total_points = 0;
 			/*make other planets reapear once this planet disappears
 				//have planet *pop* in once the other planet is gone
 		 	*/
-			$("#planets").animate({left: Math.random()+'250px', top: Math.random()+'250px'});
+			$("#planets").animate({left: Math.random()+'250px', top: '250px'});
 			setTimeout(function(){
 	  		$("#planets").css("visibility", "visible");
 			}, 500);
@@ -65,14 +68,14 @@ var total_points = 0;
 			//1.if '0' 
 				//health will go down by 10%
 				$("#health").css("width", "10%");
-				/*if number from the movies make *critical hit* 
-				 which brings health down to 30% */
+		
 
 		
 
 		}
 
 
+deathStar.shoot(planet);
 
 	var left = 2;
 	var right = 2;
