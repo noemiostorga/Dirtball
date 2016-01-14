@@ -2,22 +2,6 @@ $(document).ready(function (){
 
 	
 
-var deathStar = function() {	
-	this.health = function () {
-		 if (shoot > 3) {
-      deathStar.health -= 10;
-    } else {
-      $("#health:hover").css("width", '-10%');
-    }
-	};
-
-	this.shoot =  function (planet) {
-     return Math.floor(Math.random() * (10 - 1) + 1);
-   
-  };
-	 //function that'll attack and affect health
-
-}
 
 
 
@@ -52,6 +36,22 @@ var total_points = 0;
 		});
 
 
+var deathStar = function() {	
+	this.health = function () {
+		 if (shoot > 3) {
+      deathStar.health -= 10;
+    } else {
+      $("#health:hover").css("width", '-10%');
+    }
+	};
+
+	this.shoot =  function (planet) {
+     return Math.floor(Math.random() * (10 - 1) + 1);
+   
+  };
+	 //function that'll attack and affect health
+
+}
 
 		var punto = function() {
 			//math.random will be points on planets range from 0 - 100
